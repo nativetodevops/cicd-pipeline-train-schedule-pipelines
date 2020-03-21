@@ -1,12 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage ('Build') {
       steps {
-      echo 'Running build automation'
-      sh './gradle build --no-daemon'
-      archiveArtifacts artifacts: 'dist/train-Schedule.zip'
-     }
+        echo 'Running build automation'
+        sh './gradle build --no-daemon'
+        archiveArtifacts artifacts: 'dist/train-Schedule.zip'
+      }
     }
   }
 }    
